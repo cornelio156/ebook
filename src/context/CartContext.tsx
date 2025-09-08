@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useContext, useMemo, useReducer } from 'react';
+import { createContext, useContext, useMemo, useReducer } from 'react';
+import type { ReactNode } from 'react';
 import type { Ebook } from '../data/ebooks';
 
 export type CartItem = {

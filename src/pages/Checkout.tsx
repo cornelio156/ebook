@@ -33,8 +33,9 @@ export default function Checkout() {
         <div className="summary-inline">Total: ${totalUsd.toFixed(2)}</div>
         <PayPalButtons
           style={{ layout: 'vertical' }}
-          createOrder={(data, actions) => {
+          createOrder={(_data, actions) => {
             return actions.order.create({
+              intent: 'CAPTURE',
               purchase_units: [
                 {
                   amount: {
