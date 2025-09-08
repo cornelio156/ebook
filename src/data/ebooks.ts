@@ -19,7 +19,7 @@ export const ebooks: Ebook[] = [
     coverUrl:
       "https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/1342/1342-pdf.pdf",
-    priceUsd: 2.99,
+    priceUsd: 20,
   },
   {
     id: "pg1661",
@@ -30,7 +30,7 @@ export const ebooks: Ebook[] = [
     coverUrl:
       "https://www.gutenberg.org/cache/epub/1661/pg1661.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/1661/1661-pdf.pdf",
-    priceUsd: 2.49,
+    priceUsd: 30,
   },
   {
     id: "pg11",
@@ -40,7 +40,7 @@ export const ebooks: Ebook[] = [
       "Alice falls through a rabbit hole into a whimsical world of peculiar creatures.",
     coverUrl: "https://www.gutenberg.org/cache/epub/11/pg11.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/11/11-pdf.pdf",
-    priceUsd: 1.99,
+    priceUsd: 25,
   },
   {
     id: "pg1952",
@@ -51,7 +51,7 @@ export const ebooks: Ebook[] = [
     coverUrl:
       "https://www.gutenberg.org/cache/epub/1952/pg1952.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/1952/1952-pdf.pdf",
-    priceUsd: 0.99,
+    priceUsd: 20,
   },
   {
     id: "pg98",
@@ -61,7 +61,7 @@ export const ebooks: Ebook[] = [
       "A story of love, sacrifice, and revolution set in London and Paris.",
     coverUrl: "https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/98/98-pdf.pdf",
-    priceUsd: 2.99,
+    priceUsd: 30,
   },
   {
     id: "pg5200",
@@ -71,7 +71,7 @@ export const ebooks: Ebook[] = [
       "Gregor Samsa wakes to find himself transformed into a gigantic insect.",
     coverUrl: "https://www.gutenberg.org/cache/epub/5200/pg5200.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/5200/5200-pdf.pdf",
-    priceUsd: 1.49,
+    priceUsd: 25,
   },
   {
     id: "pg2701",
@@ -82,7 +82,7 @@ export const ebooks: Ebook[] = [
     coverUrl:
       "https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/2701/2701-pdf.pdf",
-    priceUsd: 2.99,
+    priceUsd: 20,
   },
   {
     id: "pg174",
@@ -92,7 +92,7 @@ export const ebooks: Ebook[] = [
       "A cautionary tale about vanity, moral duplicity, and eternal youth.",
     coverUrl: "https://www.gutenberg.org/cache/epub/174/pg174.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/174/174-pdf.pdf",
-    priceUsd: 1.99,
+    priceUsd: 30,
   },
   {
     id: "pg84",
@@ -102,7 +102,7 @@ export const ebooks: Ebook[] = [
       "A scientist creates a sentient creature with tragic consequences.",
     coverUrl: "https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/84/84-pdf.pdf",
-    priceUsd: 1.99,
+    priceUsd: 25,
   },
   {
     id: "pg120",
@@ -112,7 +112,7 @@ export const ebooks: Ebook[] = [
       "A coming-of-age adventure with pirates and buried treasure.",
     coverUrl: "https://www.gutenberg.org/cache/epub/120/pg120.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/120/120-pdf.pdf",
-    priceUsd: 1.49,
+    priceUsd: 20,
   },
   {
     id: "pg16328",
@@ -123,7 +123,7 @@ export const ebooks: Ebook[] = [
     coverUrl:
       "https://www.gutenberg.org/cache/epub/16328/pg16328.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/16328/16328-pdf.pdf",
-    priceUsd: 1.29,
+    priceUsd: 30,
   },
 ];
 

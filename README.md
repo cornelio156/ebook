@@ -1,69 +1,82 @@
-# React + TypeScript + Vite
+# Ebook Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma loja online de ebooks clássicos com integração PayPal para pagamentos.
 
-Currently, two official plugins are available:
+## 🚀 Deploy no Render
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Configuração Automática
 
-## Expanding the ESLint configuration
+1. **Conecte seu repositório GitHub ao Render:**
+   - Acesse [render.com](https://render.com)
+   - Faça login e clique em "New +"
+   - Selecione "Static Site"
+   - Conecte seu repositório GitHub
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Configurações do Deploy:**
+   - **Name:** ebook-store
+   - **Branch:** main (ou sua branch principal)
+   - **Build Command:** `npm install && npm run build`
+   - **Publish Directory:** `dist`
+   - **Node Version:** 18.x (ou superior)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. **Deploy:**
+   - Clique em "Create Static Site"
+   - O Render irá automaticamente fazer o build e deploy
+   - Sua aplicação estará disponível em uma URL como: `https://ebook-store.onrender.com`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Configuração Manual (se necessário)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Se preferir configurar manualmente, use as seguintes configurações:
+
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `dist`
+- **Environment:** Static Site
+
+## 🛠️ Desenvolvimento Local
+
+```bash
+# Instalar dependências
+npm install
+
+# Executar em modo desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+
+# Preview do build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Tecnologias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 19** - Framework frontend
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool e dev server
+- **React Router** - Roteamento
+- **PayPal SDK** - Processamento de pagamentos
+- **CSS3** - Estilização
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 💰 Preços dos Ebooks
+
+- **$20** - Pride and Prejudice, The Yellow Wallpaper, Moby-Dick, Treasure Island
+- **$25** - Alice's Adventures in Wonderland, Metamorphosis, Frankenstein
+- **$30** - The Adventures of Sherlock Holmes, A Tale of Two Cities, The Picture of Dorian Gray, Beowulf
+
+## 🔧 Estrutura do Projeto
+
 ```
+src/
+├── components/     # Componentes reutilizáveis
+├── context/        # Context API para estado global
+├── data/          # Dados dos ebooks
+├── pages/         # Páginas da aplicação
+└── assets/        # Imagens e recursos estáticos
+```
+
+## 📝 Notas Importantes
+
+- Os ebooks são de domínio público (Project Gutenberg)
+- Integração com PayPal para processamento de pagamentos
+- Design responsivo para mobile e desktop
+- Build otimizado para produção
