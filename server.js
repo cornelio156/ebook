@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import Stripe from 'stripe';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
@@ -48,6 +50,21 @@ app.post('/api/create-checkout-session', async (req, res) => {
     console.error(err);
     return res.status(500).json({ error: 'Failed to create session' });
   }
+});
+
+// Health check for Render
+app.get('/healthz', (_req, res) => res.status(200).send('ok'));
+
+// Serve frontend build (dist) in production
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.join(__dirname, 'dist');
+app.use(express.static(distPath));
+
+// SPA fallback
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 const PORT = process.env.PORT || 4242;
