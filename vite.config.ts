@@ -5,6 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4242',
+        changeOrigin: true,
+      },
+    },
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -15,7 +23,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          paypal: ['@paypal/react-paypal-js']
+          // paypal: ['@paypal/react-paypal-js']
         }
       }
     }

@@ -4,16 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import './index.css'
 import App from './App.tsx'
-import { PayPalScriptProvider } from '@paypal/react-paypal-js'
+// Removed PayPal provider; Stripe does not require a global provider for simple Checkout
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <PayPalScriptProvider options={{ clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || 'REPLACE_WITH_YOUR_CLIENT_ID', currency: 'USD' }}>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </PayPalScriptProvider>
+      <CartProvider>
+        <App />
+      </CartProvider>
     </BrowserRouter>
   </StrictMode>,
 )

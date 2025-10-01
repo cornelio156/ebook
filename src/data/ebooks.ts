@@ -6,6 +6,8 @@ export type Ebook = {
   coverUrl: string;
   pdfUrl: string;
   priceUsd: number;
+  // Optional Stripe Price ID if using pre-created Prices for Checkout
+  priceId?: string;
 };
 
 // Public-domain ebooks (PDFs) from trusted sources (e.g., Project Gutenberg)
@@ -124,6 +126,98 @@ export const ebooks: Ebook[] = [
       "https://www.gutenberg.org/cache/epub/16328/pg16328.cover.medium.jpg",
     pdfUrl: "https://www.gutenberg.org/files/16328/16328-pdf.pdf",
     priceUsd: 30,
+  },
+  // Custom ebooks/courses
+  {
+    id: "personal-development-ebook",
+    title: "Personal Development Ebook",
+    author: "Various",
+    description: "A concise guide to habits, mindset, and goal-setting.",
+    coverUrl: "https://picsum.photos/seed/personal-development-ebook/300/450",
+    pdfUrl: "https://example.com/personal-development.pdf",
+    priceUsd: 25,
+    // Fill with your Stripe Price ID (e.g., price_123)
+    priceId: "",
+  },
+  {
+    id: "financial-freedom-ebook",
+    title: "Financial Freedom Ebook",
+    author: "Various",
+    description: "Strategies for budgeting, investing, and building wealth.",
+    coverUrl: "https://picsum.photos/seed/financial-freedom-ebook/300/450",
+    pdfUrl: "https://example.com/financial-freedom.pdf",
+    priceUsd: 30,
+    priceId: "",
+  },
+  {
+    id: "digital-marketing-guide",
+    title: "Digital Marketing Guide",
+    author: "Various",
+    description: "Practical playbook for SEO, ads, email, and social media.",
+    coverUrl: "https://picsum.photos/seed/digital-marketing-guide/300/450",
+    pdfUrl: "https://example.com/digital-marketing.pdf",
+    priceUsd: 35,
+    priceId: "",
+  },
+  {
+    id: "health-wellness-ebook",
+    title: "Health & Wellness Ebook",
+    author: "Various",
+    description: "Nutrition, movement, and recovery fundamentals for longevity.",
+    coverUrl: "https://picsum.photos/seed/health-wellness-ebook/300/450",
+    pdfUrl: "https://example.com/health-wellness.pdf",
+    priceUsd: 40,
+    priceId: "",
+  },
+  {
+    id: "productivity-masterclass",
+    title: "Productivity Masterclass",
+    author: "Various",
+    description: "Systems and tools to get more done with less stress.",
+    coverUrl: "https://picsum.photos/seed/productivity-masterclass/300/450",
+    pdfUrl: "https://example.com/productivity-masterclass.pdf",
+    priceUsd: 45,
+    priceId: "",
+  },
+  {
+    id: "mindfulness-meditation-guide",
+    title: "Mindfulness & Meditation Guide",
+    author: "Various",
+    description: "Daily practices to reduce anxiety and improve focus.",
+    coverUrl: "https://picsum.photos/seed/mindfulness-meditation-guide/300/450",
+    pdfUrl: "https://example.com/mindfulness-meditation.pdf",
+    priceUsd: 60,
+    priceId: "",
+  },
+  {
+    id: "entrepreneurship-blueprint",
+    title: "Entrepreneurship Blueprint",
+    author: "Various",
+    description: "From idea validation to launch and early traction.",
+    coverUrl: "https://picsum.photos/seed/entrepreneurship-blueprint/300/450",
+    pdfUrl: "https://example.com/entrepreneurship-blueprint.pdf",
+    priceUsd: 65,
+    priceId: "",
+  },
+  {
+    id: "wellness-program",
+    title: "Wellness Program",
+    author: "Various",
+    description: "Holistic program combining fitness, nutrition, and sleep.",
+    coverUrl: "https://picsum.photos/seed/wellness-program/300/450",
+    pdfUrl: "https://example.com/wellness-program.pdf",
+    priceUsd: 75,
+    priceId: "",
+  },
+  {
+    id: "success-coaching",
+    title: "Success Coaching",
+    author: "Various",
+    description: "Guided frameworks and exercises for personal success.",
+    coverUrl: "https://picsum.photos/seed/success-coaching/300/450",
+    pdfUrl: "https://example.com/success-coaching.pdf",
+    priceUsd: 85,
+    priceId: "",
   },
 ];
 
