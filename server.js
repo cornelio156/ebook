@@ -61,9 +61,8 @@ const __dirname = path.dirname(__filename);
 const distPath = path.join(__dirname, 'dist');
 app.use(express.static(distPath));
 
-// SPA fallback
-app.get('/*', (req, res, next) => {
-  if (req.path.startsWith('/api')) return next();
+// SPA fallback (Express 5 compatible): use RegExp to avoid '*' parsing issues
+app.get(/^(?!\/api).*/, (_req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
